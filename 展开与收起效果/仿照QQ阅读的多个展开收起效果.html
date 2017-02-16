@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+
+        body { margin: 0 auto;padding: 0; font-size: 9pt; line-height: 180%}
+
+        #pn {
+            background: #f8f8f8;
+            height: auto;
+            width: 750px;
+            margin: 0 auto;
+            padding: 5px;
+        }
+
+        .artTitle {
+            font-weight: bold;
+            color: #3030FF;
+            font-size: 11pt;
+        }
+
+        .subTitle {
+            color: #ccc;
+        }
+
+        .content {
+            border: 1px solid #ccc;
+            display: none;
+            padding: 5px;
+        }
+
+        .btm {
+            text-align: right;
+            height: 30px;
+        }
+
+        .btn {
+            width: 80px;
+            height: 20px;
+            padding: 5px 3px;
+            text-align: center;
+            text-decoration: none;
+            background: #f0f0f0;
+            border: 1px solid #cccccc;
+        }
+
+
+    </style>
+
+
+    <script type="text/javascript">
+
+        function showdiv(obj) {
+
+            var x = obj.parentNode;//摘要
+            var y = x.nextSibling;//正文
+            if(y.nodeType != 1) {//浏览器兼容
+                y = y.nextSibling;
+            }
+            y.style.display = 'block';
+            x.style.display = 'none';
+
+        }
+
+        function hidediv(obj) {
+
+            var y = obj.parentNode.parentNode;//正文
+            var x = y.previousSibling;//摘要
+            if(x.nodeType != 1) {
+                x = x.previousSibling;
+            }
+            y.style.display = 'none';
+            x.style.display = 'block';
+
+
+        }
+
+
+    </script>
+
+</head>
+<body>
+
+    <div id="pn">
+        <div id="art0">
+            <p class="artTitle">5种方法解除开机密码</p>
+            <p class="subTitle">来源及发表时间</p>
+            <p>
+                教你怎样解除电脑开机密码！！！先记下来，以后总会有用到的！！！此方法仅供计算机教师交流，严禁作为非法手段使用！方法一在开机时，按下F8进入”带命令提示符的安全”模式输入”NET USER+用户名+123456/ADD”可把某用户的密码强行设置为”123456″方法二如用户忘记登入密码可按下列方法解决1.在计算机启动时按〔F8〕及选〔Safe Mode Wit......
+                <a href="#" onclick="showdiv(this)">全文</a>
+            </p>
+            <div class="content">
+                3、键入命令：”net user owner 123456/add”，强制性将OWNER用户的口令更改为”123456″。若想在此添加某一用户(如：用户名为abcdef，口令为123456) 的话,请键入”net user abcdef 123456/add”,添加后可用”net localgroup administrators abcdef/add”命令将用户提升为系统管理组administrators用户,具有超级权限。
+                4.DOS下删windows\system32\config里面的SAM档就可以了
+                5.开机后按键盘的Delete键进入BIOS界面。找到User Password选项，其默认为关闭状态。启动并输入用户密码(1~8位，英文或者数字)。计算机提示请再输入一遍以确认密码无误，保存退出后重新启动机器，这时就会在开机时出现密码菜单
+                方法四如果是FAT32，进入DOS，删除c：winntsystem32configsam*.*就可以了。登陆只要输入administrator不输密码即可。然后创建一个新的。要是NTFS则无效
+                另外如果你的系统没有加过微软的输入法补丁的话也可以利用输入法的漏洞去做一个管理员权限账号，
+                具体方法如下：
+                开机后，Win2000自启动，出现登录窗口，显示用户名，并要求输入密码(当然这时你不会有密码)。
+                这时请将输入焦点置于用户名一项，用Ctrl+Shift切换输入法(随便选上一种，只要能出现输入法工具条的就行)。在出现的输入法提示工具条上单击右键，选择帮助，会弹出一个帮助窗口。接下来你需要在这个窗口里找到一个(绿色带下划线)超级链接，并用SHIFT+鼠标左键单击，打开它会弹出一个IE窗口，请在窗口地址栏里输入c：，到这步你应该很清楚怎么做了。只要点击标准按键的”向上”，会发现你可以进入”控制面板”了，进入后你可以直奔”用户和密码”接下发生的事只有你自己知道了。
+                方法五我们知道在安装Windows XP过程中，首先是以”administrator”默认登录，然后会要求创建一个新账户，以便进入Windows XP时使用此新建账户登录，而且在Windows XP的登录接口中也只会出现创建的这个用户账号，不会出现”administrator”，但实际上该”administrator”账号还是存在的，并且密码为空。
+                <div class="btm">
+                    <a href="#" class="btn" onclick="hidediv(this)">收起全文</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>自动展开</title>
+    <style type="text/css">   /*设置广告和正文的CSS样式*/
+        body{margin: 0; padding: 0; font-size: 12px;}
+
+        #ad {
+            background: #e8e8e8;
+            margin: 0 auto;
+            padding: 5px;
+            height: 100px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #header {
+            width: 960px;
+            margin: 0 auto;
+            background: gray;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+        //增加广告宽度函数
+
+        var w = 0;
+        function addWidth() {
+            if(w < 950) {
+                w += 50;
+                document.getElementById("ad").style.width = w + 'px';
+            }else {
+                return;
+            }
+            setTimeout('addWidth()', 30);
+        }
+
+
+
+
+        //在网页加载完毕时，调用增加宽度函数，等待5秒钟后调用减少宽度函数。
+        window.onload = function () {
+            addWidth();
+            setTimeout('subWidth()', 5000);
+        }
+
+
+
+
+        //减少广告宽度函数
+
+        function subWidth() {
+            if(w > 0) {
+                w -= 50;
+                document.getElementById("ad").style.width = w + 'px';
+            }else {
+                document.getElementById("ad").style.display = 'none';
+                return;
+            }
+            setTimeout('subWidth()', 30);
+        }
+
+
+    </script>
+</head>
+<body>
+<!--广告和正文的HTML代码-->
+
+
+    <div id="ad">
+        <h1>欢迎来到慕课网</h1>
+        <h2>大幅广告</h2>
+    </div>
+    <div id="header">
+        慕课网欢迎你
+    </div>
+
+</body>
+</html>

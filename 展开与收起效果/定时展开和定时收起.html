@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <style>
+        body {
+            margin: 0 auto;
+            padding: 0;
+        }
+        #pn {
+            background: #e8e8e8;
+            width: 950px;
+            display: block;
+            margin: 0 auto;
+            padding: 5px;
+            height: auto;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        #content {
+            margin: 0 auto;
+            padding: 5px;
+            width: 950px;
+            background: gray;
+            text-align: center;
+            height: 40px;
+            color: #fff;
+        }
+
+        #content p {
+            margin: 0;
+            height: 40px;
+            line-height: 40px;
+        }
+
+    </style>
+
+
+    <script type="text/javascript">
+
+        //增加高度
+        var h = 0;
+        function addHeight() {
+            if(h < 300) {
+                h += 5;
+                document.getElementById('pn').style.height = h + 'px';
+            }else {
+                return;
+            }
+            setTimeout("addHeight()", 30);
+        }
+
+        window.onload = function () {
+            addHeight();
+            setTimeout("subHeight()", 5000);
+        }
+
+        //减少高度
+        function subHeight() {
+            if(h > 0) {
+                h -= 5;
+                document.getElementById('pn').style.height = h + 'px';
+            } else {
+                document.getElementById('pn').style.display = 'none';
+                return;
+            }
+            setTimeout("subHeight()", 30);
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <div id="pn">
+        <h1>这是广告</h1>
+        <h2>你都看到了，谁还没看到</h2>
+    </div>
+    <div id="content">
+        <p>XXX网</p>
+    </div>
+
+</body>
+</html>
