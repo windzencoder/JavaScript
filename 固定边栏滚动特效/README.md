@@ -4,6 +4,7 @@
 
 效果如下：
 
+![result](https://github.com/windzencoder/JavaScript/blob/master/%E5%9B%BA%E5%AE%9A%E8%BE%B9%E6%A0%8F%E6%BB%9A%E5%8A%A8%E7%89%B9%E6%95%88/images/result.gif)
 
 关键实现点：
 
