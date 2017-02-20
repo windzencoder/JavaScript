@@ -31,7 +31,69 @@
 
 相当于再clone一个内容区域，两个区域交替滚动
 
-![]()
+![无缝滚动原理](https://github.com/windzencoder/JavaScript/blob/master/%E4%BF%A1%E6%81%AF%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C%E5%88%B6%E4%BD%9C/images/principle.png)
+
+
+javascript代码如下：
+
+```
+<script type="text/javascript">
+    var area = document.getElementById('moocBox');
+    var con1 = document.getElementById('con1');
+    var con2 = document.getElementById('con2');
+    var speed = 50;
+    area.scrollTop = 0;
+    //克隆内容
+    con2.innerHTML = con1.innerHTML;
+    function scrollUp() {
+        if (area.scrollTop >= con1.scrollHeight) {
+            area.scrollTop = 0;
+        } else {
+            area.scrollTop++;
+        }
+    }
+    var myScroll = setInterval("scrollUp()", speed);
+    area.onmouseover = function () {
+        clearInterval(myScroll);
+    }
+    area.onmouseout = function () {
+        myScroll = setInterval("scrollUp()", speed);
+    }
+</script>
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
