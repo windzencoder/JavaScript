@@ -63,13 +63,17 @@ javascript代码如下：
 
 ```
 
+效果如下：
+
+![效果](https://github.com/windzencoder/JavaScript/blob/master/%E4%BF%A1%E6%81%AF%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C%E5%88%B6%E4%BD%9C/images/result_01.gif)
 
 ### 间歇性滚动
  
 就是滚动一下，停止一下。滚动一行或者多行
+ 
+效果如下
 
-
-
+![效果](https://github.com/windzencoder/JavaScript/blob/master/%E4%BF%A1%E6%81%AF%E6%BB%9A%E5%8A%A8%E6%95%88%E6%9E%9C%E5%88%B6%E4%BD%9C/images/result_02.gif)
 
 
 
