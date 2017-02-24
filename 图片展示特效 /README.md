@@ -26,6 +26,7 @@ function showDetail(){
 ```
 
 效果如下：
+![效果图](https://github.com/windzencoder/JavaScript/blob/master/%E5%9B%BE%E7%89%87%E5%B1%95%E7%A4%BA%E7%89%B9%E6%95%88%20/images/result01.gif)
 
 ## 图片侧位展示效果
 
