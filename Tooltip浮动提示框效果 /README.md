@@ -36,7 +36,7 @@
 
 效果如下：
 
-![]()
+![效果](https://github.com/windzencoder/JavaScript/blob/master/Tooltip%E6%B5%AE%E5%8A%A8%E6%8F%90%E7%A4%BA%E6%A1%86%E6%95%88%E6%9E%9C%20/images/result.png)
 
 
 ```
